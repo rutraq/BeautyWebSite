@@ -1,0 +1,103 @@
+@import "variables";
+@import "header";
+
+#content {
+
+  #firstGirl {
+    min-width: 100%;
+    max-height: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  #firstArticle {
+    margin-top: 10%;
+    margin-left: 8%;
+
+    .calgary {
+      font-family: Calgria, 'sans-serif';
+      font-size: 64pt;
+      color: #FFFFFF;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .smallFont {
+      font-weight: normal;
+      font-size: 24pt;
+    }
+
+    .bigFont {
+      font-size: 82pt;
+    }
+
+    #check {
+      color: #432328;
+      font-family: Kurye, 'sans-serif';
+      font-size: 15pt;
+      margin-top: 2%;
+    }
+
+    #buttonsFirst {
+      display: flex;
+      flex-direction: row;
+      margin-top: 28px;
+
+      .bookAppointment {
+        align-self: center;
+        color: white;
+        font-family: Kurye, serif;
+        font-size: 14px;
+        background-color: @backColorButtonBooking;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 16px 48px;
+
+        &:hover {
+          transition: 0.4s;
+          transform: scale(1.02);
+        }
+      }
+
+      .services {
+        align-self: center;
+        color: #AE825D;
+        font-family: Kurye, serif;
+        font-size: 14px;
+        border: 1px solid #AE825D;
+        box-sizing: border-box;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 16px 48px;
+        margin-left: 1%;
+      }
+    }
+
+    #services {
+      margin-top: 4%;
+      display: flex;
+      flex-direction: row;
+      color: #AE825D;
+      font-family: Kurye, 'sans-serif';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12pt;
+
+      > div {
+        margin-right: 93px;
+
+        div:first-child {
+          margin-bottom: 8px;
+        }
+      }
+
+      .firstColumn, .secondColumn, .thirdColumn {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

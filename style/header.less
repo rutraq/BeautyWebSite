@@ -1,0 +1,85 @@
+@import "variables";
+
+body {
+  margin: 0;
+
+  header {
+    height: 82px;
+    background: rgba(37, 37, 37, 0.8);
+    display: flex;
+    flex-direction: row;
+
+    #logo {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      margin-left: 8%;
+    }
+
+    .logoImg, .underLogo {
+      color: @orangeTextColor;
+      font-family: @fontFamilyLogo;
+      letter-spacing: 0.165em;
+    }
+
+    .logoImg {
+      font-size: 20px;
+    }
+
+    .underLogo {
+      font-size: 10px;
+      margin-left: 20%;
+    }
+
+    #navButtons {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      align-self: center;
+      font-family: Kurye, serif;
+      margin-left: 16%;
+
+      div {
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 27px;
+        font-style: normal;
+        font-weight: 300;
+        margin: 0 5px;
+        padding: 10px;
+        transition-duration: 0.3s;
+
+        &:hover {
+          transition-duration: 0.4s;
+          background-color: rgba(37, 37, 37, 0.2);
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .bookAppointment {
+      align-self: center;
+      color: white;
+      font-family: Kurye, serif;
+      font-size: 14px;
+      padding: 16px 48px;
+      background-color: @backColorButtonBooking;
+      border-radius: 8px;
+      margin-left: 10%;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transition: 0.4s;
+        transform: scale(1.02);
+      }
+    }
+  }
+}
