@@ -1,0 +1,56 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+
+  div {
+    width: 56px;
+    height: 56px;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transition: .4s;
+      transform: scale(1.04);
+    }
+
+    &.inactive {
+      opacity: .65;
+    }
+  }
+
+  .left {
+    margin-right: 24px;
+  }
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-right: 11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #798189;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  #circle1, #circle5 {
+    opacity: .6;
+  }
+
+  .active {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+  }
+}
