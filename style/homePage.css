@@ -349,7 +349,7 @@ body header .bookAppointment:hover {
 #content #fourthArticle #comments {
   display: flex;
   flex-direction: row;
-  max-height: 70%;
+  max-height: 60%;
   margin-top: 7%;
   margin-left: 30px;
 }
@@ -359,12 +359,16 @@ body header .bookAppointment:hover {
   border-radius: 8px;
   box-sizing: border-box;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 50px 24px 32px 24px;
+  padding: 0 24px 32px 24px;
   font-family: "Helvetica regular", sans-serif;
   margin-right: 15px;
 }
 #content #fourthArticle #comments > div:last-child {
   margin-right: 0;
+}
+#content #fourthArticle #comments img {
+  position: relative;
+  top: -5%;
 }
 #content #fourthArticle #comments .name {
   letter-spacing: 0.04em;
