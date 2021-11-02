@@ -1,12 +1,4 @@
 @font-face {
-  font-family: Kurye;
-  src: url("fonts/Kurye-LightItalic.otf");
-}
-@font-face {
-  font-family: Calgria;
-  src: url("fonts/LekyCalgria.ttf");
-}
-@font-face {
   font-family: Helvetica regular;
   src: url("fonts/helvetica_regular.otf");
 }
@@ -43,15 +35,16 @@ body header #navButtons {
   flex-direction: row;
   color: white;
   align-self: center;
-  font-family: Kurye, serif;
   margin-left: 16%;
 }
 body header #navButtons div {
   cursor: pointer;
-  font-size: 18px;
-  line-height: 27px;
+  font-family: "Helvetica regular", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.055em;
   margin: 0 5px;
   padding: 10px;
   transition-duration: 0.3s;
@@ -69,7 +62,7 @@ body header #navButtons div:last-child {
 body header .bookAppointment {
   align-self: center;
   color: white;
-  font-family: Kurye, serif;
+  font-family: "Helvetica regular", sans-serif;
   font-size: 14px;
   padding: 16px 48px;
   background-color: #AE825D;
@@ -389,5 +382,188 @@ body header .bookAppointment:hover {
 }
 #content #fourthArticle #comments img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+#content #getInTouch {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+}
+#content #getInTouch #social {
+  display: flex;
+  flex-direction: column;
+}
+#content #getInTouch #social img {
+  width: 85%;
+}
+#content #getInTouch #social #networks {
+  background-color: #798189;
+  width: 85%;
+  padding: 37px 0;
+  text-align: center;
+}
+#content #getInTouch #social #networks span {
+  margin-right: 46px;
+  font-family: "Helvetica regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 150%;
+  color: #F6F0E9;
+  cursor: pointer;
+}
+#content #getInTouch #feedback {
+  margin-top: 3%;
+}
+#content #getInTouch #feedback .bigFont {
+  font-family: "Helvetica regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50pt;
+  line-height: 100%;
+}
+#content #getInTouch #feedback .smallFont {
+  font-family: "Helvetica regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #432328;
+  margin-top: 3%;
+}
+#content #getInTouch #feedback svg {
+  position: relative;
+  left: -55%;
+  z-index: -1;
+  margin-top: 8%;
+}
+#content #getInTouch #feedback .name {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+}
+#content #getInTouch #feedback #firstName,
+#content #getInTouch #feedback #secondName {
+  display: flex;
+  flex-direction: column;
+}
+#content #getInTouch #feedback #firstName {
+  margin-right: 5%;
+}
+#content #getInTouch #feedback input {
+  padding: 17px 0 18px 16px;
+}
+#content #getInTouch #feedback #servicesToChoose {
+  margin-top: 3%;
+}
+#content #getInTouch #feedback #servicesToChoose span {
+  font-family: "Helvetica regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #432328;
+}
+#content #getInTouch #feedback .labelFeedback {
+  font-family: "Helvetica regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #432328;
+  margin-bottom: 3%;
+}
+#content #getInTouch #feedback .inputFeedback {
+  border: 1px solid #AE825D;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: Helvetica regular, sans-serif;
+}
+#content #getInTouch #feedback #email {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  width: 81%;
+}
+#content #getInTouch #feedback #email label {
+  margin-bottom: 1.5%;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes {
+  display: flex;
+  flex-direction: row;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1,
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column2 {
+  display: flex;
+  flex-direction: column;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1 label,
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column2 label {
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 100%;
+  color: #AE825D;
+  cursor: pointer;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1 input,
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column2 input {
+  cursor: pointer;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1 input[type='radio'],
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column2 input[type='radio'] {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1 input[type='radio']::before,
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column2 input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #AE825D;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1 input[type='radio']:checked::after,
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column2 input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #AE825D;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+#content #getInTouch #feedback #servicesToChoose #checkBoxes #column1 {
+  margin-right: 20%;
+}
+#content #getInTouch #feedback #message {
+  display: flex;
+  flex-direction: column;
+  width: 81%;
+}
+#content #getInTouch #feedback #message label {
+  margin-bottom: 1.5%;
+  margin-top: 3%;
+}
+#content .line {
+  background-color: #F6F0E9;
+  height: 100px;
+  min-width: 100%;
 }
 /*# sourceMappingURL=homePage.css.map */

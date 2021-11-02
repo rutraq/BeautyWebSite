@@ -146,9 +146,86 @@
         </div>
     </div>
 
+    <div id="getInTouch">
+        <div id="social">
+            <img src="photos/Map.jpg" alt="map">
+            <div id="networks">
+                <span>Facebook</span>
+                <span>Instagram</span>
+                <span>Twitter</span>
+                <span>Telegram</span>
+            </div>
+        </div>
+
+        <div id="feedback">
+            <div class="bigFont">Get in Touch</div>
+            <svg width="340" height="3" xmlns="http://www.w3.org/2000/svg">
+                <line style="stroke:black; stroke-width:2px" x1="0" y1="0" x2="340" y2="0"></line>
+            </svg>
+            <div class="smallFont">Fill up the form our team will get back to you within 2 Hours</div>
+
+            <div class="name">
+                <div id="firstName">
+                    <label for="firstNameInp" class="labelFeedback">First Name</label>
+                    <input id="firstNameInp" placeholder="Enter your first name" class="inputFeedback">
+                </div>
+                <div id="secondName">
+                    <label for="secondNameInp" class="labelFeedback">Last Name</label>
+                    <input id="secondNameInp" placeholder="Enter your last name" class="inputFeedback">
+                </div>
+            </div>
+
+            <div id="email">
+                <label for="emailInp" class="labelFeedback">Email Address</label>
+                <input id="emailInp" placeholder="Enter your email address" class="inputFeedback">
+            </div>
+
+            <div id="servicesToChoose">
+                <span>Service</span>
+                <div id="checkBoxes">
+                    <div id="column1">
+                        <div>
+                            <input type="radio" id="treatment">
+                            <label for="treatment">Treatment</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rejuvenation">
+                            <label for="rejuvenation">Rejuvenation</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="skin">
+                            <label for="skin">Skin</label>
+                        </div>
+                    </div>
+                    <div id="column2">
+                        <div>
+                            <input type="radio" id="hair">
+                            <label for="hair">Hair</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="eyes">
+                            <label for="eyes">Eyes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="body">
+                            <label for="body">Body</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message">
+                <label for="messageInp" class="labelFeedback">Message</label>
+                <input id="messageInp" placeholder="Write your message" class="inputFeedback">
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+
 </div>
 
 <script src="scripts/jquery.js"></script>
 <script src="scripts/galleryHomePage.js"></script>
+<script src="scripts/uncheckRadioButtons.js"></script>
 </body>
 </html>
