@@ -150,10 +150,10 @@
         <div id="social">
             <img src="photos/Map.jpg" alt="map">
             <div id="networks">
-                <span>Facebook</span>
-                <span>Instagram</span>
-                <span>Twitter</span>
-                <span>Telegram</span>
+                <span><img src="photos/facebook.png" alt="facebook">Facebook</span>
+                <span><img src="photos/instagram.png" alt="instagram">Instagram</span>
+                <span><img src="photos/twitter.png" alt="twitter">Twitter</span>
+                <span><img src="photos/telegram.png" alt="telegram">Telegram</span>
             </div>
         </div>
 
@@ -164,7 +164,7 @@
             </svg>
             <div class="smallFont">Fill up the form our team will get back to you within 2 Hours</div>
 
-            <div class="name">
+            <div class="name" id="test">
                 <div id="firstName">
                     <label for="firstNameInp" class="labelFeedback">First Name</label>
                     <input id="firstNameInp" placeholder="Enter your first name" class="inputFeedback">
@@ -217,15 +217,54 @@
             <div id="message">
                 <label for="messageInp" class="labelFeedback">Message</label>
                 <input id="messageInp" placeholder="Write your message" class="inputFeedback">
+                <div id="sendMessageButton">Send Message</div>
             </div>
         </div>
     </div>
     <div class="line"></div>
+
+    <footer>
+        <div class="text">
+            <div class="logoImg">FEMLONE</div>
+            <div class="underLogo">AESTETICS</div>
+            <div class="words">Stay healthy and beauty with specialists Femlone</div>
+            <div class="copyright">Copyright Femlone AESTHETICS</div>
+        </div>
+        <div class="contacts">
+            <div class="bigFont">Get in Touch</div>
+            <figure class="place">
+                <img src="photos/location.png" alt="location">
+                <figcaption>Šilo g., Vilnius 10317</figcaption>
+            </figure>
+            <figure class="email">
+                <img src="photos/email.png" alt="email">
+                <figcaption>admin@femlone.com</figcaption>
+            </figure>
+            <figure class="telephone">
+                <img src="photos/phone.png" alt="phone">
+                <figcaption>+3-706-300-6661</figcaption>
+            </figure>
+        </div>
+        <div class="socialNetworks">
+            <div>Ask any questions in our social networks</div>
+            <img src="photos/facebookFooter.png" alt="facebook">
+            <img src="photos/instagramFooter.png" alt="instagram">
+        </div>
+        <div class="newsletter">
+            <div class="join">Join a Newsletter</div>
+            <span>
+                <label for="emailInpFooter">Your Email</label>
+                <input type="text" id="emailInpFooter" placeholder="Enter Your Email">
+            </span>
+            <div class="button">Subscribe</div>
+        </div>
+    </footer>
 
 </div>
 
 <script src="scripts/jquery.js"></script>
 <script src="scripts/galleryHomePage.js"></script>
 <script src="scripts/uncheckRadioButtons.js"></script>
+<script src="scripts/makeSameWidth.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 @import "variables";
 @import "header";
 @import "navigation";
+@import "footer";
 
 #content {
 
@@ -16,6 +17,7 @@
   #firstArticle {
     margin-top: 10%;
     margin-left: 8%;
+    height: 80vh;
 
     .calgary {
       font-family: "Helvetica regular", sans-serif;
@@ -50,7 +52,7 @@
         color: white;
         font-family: "Helvetica regular", sans-serif;
         font-size: 14px;
-        background-color: @brownLightColor;
+        background-color: @goldColor;
         border-radius: 8px;
         cursor: pointer;
         transition: 0.3s;
@@ -157,8 +159,6 @@
   }
 
   #secondArticle {
-    margin-top: 10%;
-
     .border {
       height: 0;
       margin-left: auto;
@@ -212,10 +212,10 @@
     margin-top: 3%;
     display: flex;
     flex-direction: row;
+    font-family: @fontFamilyHelvetica;
 
     .bigFont {
       max-width: 500px;
-      font-family: "Helvetica regular", sans-serif;
       margin-top: 7%;
       margin-left: 7%;
       font-size: 45pt;
@@ -318,12 +318,12 @@
       flex-direction: column;
 
       img {
-        width: 85%;
+        width: 90%;
       }
 
       #networks {
         background-color: #798189;
-        width: 85%;
+        width: 90%;
         padding: 37px 0;
         text-align: center;
 
@@ -336,12 +336,24 @@
           line-height: 150%;
           color: #F6F0E9;
           cursor: pointer;
+
+          img {
+            width: 24px;
+            position: relative;
+            top: 10%;
+            padding-right: 5px;
+          }
+
+          img[alt="telegram"] {
+            top: 5%;
+          }
         }
       }
     }
 
     #feedback {
       margin-top: 3%;
+      margin-left: 5%;
 
       .bigFont {
         font-family: "Helvetica regular", sans-serif;
@@ -364,7 +376,7 @@
 
       svg {
         position: relative;
-        left: -55%;
+        left: -45%;
         z-index: -1;
         margin-top: 8%;
       }
@@ -400,38 +412,7 @@
           letter-spacing: 0.04em;
           color: #432328;
         }
-      }
 
-      .labelFeedback {
-        font-family: "Helvetica regular", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18pt;
-        line-height: 133%;
-        letter-spacing: 0.04em;
-        color: #432328;
-        margin-bottom: 3%;
-      }
-
-      .inputFeedback {
-        border: 1px solid #AE825D;
-        box-sizing: border-box;
-        border-radius: 8px;
-        font-family: @fontFamilyHelvetica;
-      }
-
-      #email {
-        display: flex;
-        flex-direction: column;
-        margin-top: 3%;
-        width: 81%;
-
-        label {
-          margin-bottom: 1.5%;
-        }
-      }
-
-      #servicesToChoose {
         #checkBoxes {
           display: flex;
           flex-direction: row;
@@ -474,7 +455,7 @@
               border-radius: 50%;
               transform: translate(-50%, -50%);
               background-color: white;
-              border: 2px solid @brownLightColor;
+              border: 2px solid @goldColor;
             }
 
             input[type='radio']:checked::after {
@@ -485,7 +466,7 @@
               width: 8px;
               height: 8px;
               border-radius: 50%;
-              background-color: @brownLightColor;
+              background-color: @goldColor;
               transform: translate(-50%, -50%);
               visibility: visible;
             }
@@ -497,14 +478,61 @@
         }
       }
 
+      .labelFeedback {
+        font-family: "Helvetica regular", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18pt;
+        line-height: 133%;
+        letter-spacing: 0.04em;
+        color: #432328;
+        margin-bottom: 3%;
+      }
+
+      .inputFeedback {
+        border: 1px solid #AE825D;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-family: @fontFamilyHelvetica;
+      }
+
+      #email {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+
+        label {
+          margin-bottom: 1.5%;
+        }
+      }
+
       #message {
         display: flex;
         flex-direction: column;
-        width: 81%;
 
         label {
           margin-bottom: 1.5%;
           margin-top: 3%;
+        }
+
+        #messageInp {
+          min-height: 25%;
+        }
+
+        #sendMessageButton {
+          width: 38%;
+          background: #252525;
+          border-radius: 8px;
+          font-family: @fontFamilyHelvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 150%;
+          color: #F6F0E9;
+          cursor: pointer;
+          padding: 3% 0;
+          text-align: center;
+          margin-top: 7%;
         }
       }
     }
@@ -512,7 +540,7 @@
 
   .line {
     background-color: #F6F0E9;
-    height: 100px;
+    height: 60px;
     min-width: 100%;
   }
 }
