@@ -8,10 +8,11 @@ let photos = ["photo1", "photo2", "photo3", "photo4", "photo5"];
 function animatePhotosRight() {
     if (circle > 1) {
         for (let i = 0; i < photos.length; i++) {
-            $(`#${photos[i]}`).css("position", "relative").animate({left: "+=300px"}, 500);
+            $(`#${photos[i]}`).css("position", "relative").animate({left: "+=18%"}, 500);
         }
-        $(`#photo${circle} img`).css("width", "328px").css("height", "390px");
+        $(`#photo${circle} img`).css({width: "328px", height: "390px"});
         $(`#photo${circle-1} img`).css({width: "504px", height: "522px"});
+        $(`#photo${circle+1} img`).css({width: "128px", height: "220px"});
         changeCircles(-1);
     }
 }
@@ -19,7 +20,7 @@ function animatePhotosRight() {
 function animatePhotosLeft() {
     if (circle < 5) {
         for (let i = 0; i < photos.length; i++) {
-            $(`#${photos[i]}`).css("position", "relative").animate({left: "-=300px"}, 500);
+            $(`#${photos[i]}`).css("position", "relative").animate({left: "-=18%"}, 500);
         }
         $(`#photo${circle} img`).css({width: "328px", height: "390px"});
         $(`#photo${circle+1} img`).css({width: "504px", height: "522px"});
