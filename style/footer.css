@@ -1,0 +1,153 @@
+@font-face {
+  font-family: Helvetica regular;
+  src: url("fonts/helvetica_regular.otf");
+}
+footer {
+  background-color: #252525;
+  height: 35vh;
+  display: flex;
+  flex-direction: row;
+  font-family: Helvetica regular, sans-serif;
+}
+footer .logoImg,
+footer .underLogo {
+  color: #DBB32F;
+  font-family: Helvetica regular, sans-serif;
+  letter-spacing: 0.165em;
+}
+footer .logoImg {
+  font-size: 20px;
+}
+footer .underLogo {
+  font-size: 10px;
+  margin-left: 7%;
+}
+footer .text,
+footer .contacts,
+footer .socialNetworks,
+footer .newsletter {
+  margin-top: 4%;
+}
+footer .text {
+  margin-left: 4%;
+}
+footer .text .words {
+  margin-top: 9%;
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  opacity: 0.8;
+  width: 50%;
+}
+footer .text .copyright {
+  margin-top: 15%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  text-decoration-line: underline;
+  color: #798189;
+  opacity: 0.6;
+}
+footer .contacts {
+  width: 15%;
+  margin-left: 9%;
+}
+footer .contacts figure {
+  display: flex;
+  flex-direction: row;
+  margin: 7% 0;
+}
+footer .contacts figure:first-child {
+  margin-top: 17%;
+}
+footer .contacts figure figcaption {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 150%;
+  color: #F6F0E9;
+  opacity: 0.8;
+  padding-left: 5%;
+}
+footer .contacts .bigFont {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #AE825D;
+}
+footer .socialNetworks {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  opacity: 0.8;
+  width: 12%;
+  margin-left: 10%;
+}
+footer .socialNetworks div {
+  margin-bottom: 12%;
+}
+footer .socialNetworks img {
+  margin-right: 7%;
+}
+footer .newsletter {
+  margin-left: auto;
+  padding-right: 4%;
+}
+footer .newsletter .join {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #AE825D;
+}
+footer .newsletter span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8%;
+}
+footer .newsletter span label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  margin-bottom: 4%;
+}
+footer .newsletter span input {
+  border: 1px solid #AE825D;
+  box-sizing: border-box;
+  padding: 16px 120px 19px 16px;
+}
+footer .newsletter span input::placeholder {
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #798189;
+  opacity: 0.6;
+}
+footer .newsletter .button {
+  background-color: #AE825D;
+  margin-top: 8%;
+  color: white !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  width: 55%;
+}
+/*# sourceMappingURL=footer.css.map */

@@ -73,7 +73,8 @@ body header .bookAppointment {
 }
 body header .bookAppointment:hover {
   transition: 0.4s;
-  transform: scale(1.02);
+  transform: scale(1.04);
+  background-color: #B8753D;
 }
 .navigation {
   display: flex;
@@ -122,10 +123,11 @@ body header .bookAppointment:hover {
   width: 10px;
   height: 10px;
   background-color: black;
+  opacity: 1 !important;
 }
 footer {
   background-color: #252525;
-  height: 35vh;
+  height: 40vh;
   display: flex;
   flex-direction: row;
   font-family: Helvetica regular, sans-serif;
@@ -236,7 +238,7 @@ footer .newsletter .join {
 footer .newsletter span {
   display: flex;
   flex-direction: column;
-  margin-top: 8%;
+  margin-top: 4%;
 }
 footer .newsletter span label {
   font-style: normal;
@@ -270,6 +272,10 @@ footer .newsletter .button {
   font-size: 10pt;
   line-height: 150%;
   width: 55%;
+}
+footer .newsletter .button:hover {
+  background-color: #B8753D;
+  transform: scale(1.04);
 }
 #content #firstGirl {
   min-width: 100%;
@@ -321,10 +327,17 @@ footer .newsletter .button {
 }
 #content #firstArticle #buttonsFirst .bookAppointment:hover {
   transition: 0.4s;
-  transform: scale(1.02);
+  transform: scale(1.04);
+  background-color: #B8753D;
 }
 #content #firstArticle #buttonsFirst .services {
   margin-left: 1%;
+  transition: 0.4s;
+}
+#content #firstArticle #buttonsFirst .services:hover {
+  transition: 0.3s;
+  background-color: #AE825D;
+  color: white;
 }
 #content #firstArticle #services {
   margin-top: 4%;
@@ -403,6 +416,12 @@ footer .newsletter .button {
 #content #thirdArticle #textSecondArticle .button {
   margin-top: 7%;
   max-width: 180px;
+  transition: 0.4s;
+}
+#content #thirdArticle #textSecondArticle .button:hover {
+  transition: 0.3s;
+  background-color: #AE825D;
+  color: white;
 }
 #content #secondArticle .border {
   height: 0;
@@ -429,12 +448,12 @@ footer .newsletter .button {
 #content #secondArticle .gallery div {
   margin: auto;
 }
-#content #secondArticle .gallery #secondPhoto,
-#content #secondArticle .gallery #fourthPhoto {
+#content #secondArticle .gallery #photo2,
+#content #secondArticle .gallery #photo4 {
   opacity: 0.6;
 }
-#content #secondArticle .gallery #firstPhoto,
-#content #secondArticle .gallery #fifthPhoto {
+#content #secondArticle .gallery #photo1,
+#content #secondArticle .gallery #photo5 {
   opacity: 0.3;
 }
 #content #secondArticle .navigation {
