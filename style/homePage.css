@@ -11,6 +11,10 @@ body header {
   display: flex;
   flex-direction: row;
 }
+body header a {
+  text-decoration: none;
+  color: white;
+}
 body header #logo {
   display: flex;
   flex-direction: column;
@@ -272,6 +276,10 @@ footer .newsletter .button {
   font-size: 10pt;
   line-height: 150%;
   width: 55%;
+  padding: 16px 48px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
 }
 footer .newsletter .button:hover {
   background-color: #B8753D;
@@ -452,9 +460,17 @@ footer .newsletter .button:hover {
 #content #secondArticle .gallery #photo4 {
   opacity: 0.6;
 }
+#content #secondArticle .gallery #photo2 img,
+#content #secondArticle .gallery #photo4 img {
+  width: 328px;
+}
 #content #secondArticle .gallery #photo1,
 #content #secondArticle .gallery #photo5 {
   opacity: 0.3;
+}
+#content #secondArticle .gallery #photo1 img,
+#content #secondArticle .gallery #photo5 img {
+  width: 128px;
 }
 #content #secondArticle .navigation {
   margin-left: 7%;

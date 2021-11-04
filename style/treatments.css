@@ -1,0 +1,413 @@
+@font-face {
+  font-family: Helvetica regular;
+  src: url("fonts/helvetica_regular.otf");
+}
+body {
+  margin: 0;
+}
+body header {
+  height: 82px;
+  background: rgba(37, 37, 37, 0.8);
+  display: flex;
+  flex-direction: row;
+}
+body header a {
+  text-decoration: none;
+  color: white;
+}
+body header #logo {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: 8%;
+}
+body header .logoImg,
+body header .underLogo {
+  color: #DBB32F;
+  font-family: Helvetica regular, sans-serif;
+  letter-spacing: 0.165em;
+}
+body header .logoImg {
+  font-size: 20px;
+}
+body header .underLogo {
+  font-size: 10px;
+  margin-left: 20%;
+}
+body header #navButtons {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-self: center;
+  margin-left: 16%;
+}
+body header #navButtons div {
+  cursor: pointer;
+  font-family: "Helvetica regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  margin: 0 5px;
+  padding: 10px;
+  transition-duration: 0.3s;
+}
+body header #navButtons div:hover {
+  transition-duration: 0.4s;
+  background-color: rgba(37, 37, 37, 0.2);
+}
+body header #navButtons div:first-child {
+  margin-left: 0;
+}
+body header #navButtons div:last-child {
+  margin-right: 0;
+}
+body header .bookAppointment {
+  align-self: center;
+  color: white;
+  font-family: "Helvetica regular", sans-serif;
+  font-size: 14px;
+  padding: 16px 48px;
+  background-color: #AE825D;
+  border-radius: 8px;
+  margin-left: 10%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body header .bookAppointment:hover {
+  transition: 0.4s;
+  transform: scale(1.04);
+  background-color: #B8753D;
+}
+footer {
+  background-color: #252525;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  font-family: Helvetica regular, sans-serif;
+}
+footer .logoImg,
+footer .underLogo {
+  color: #DBB32F;
+  font-family: Helvetica regular, sans-serif;
+  letter-spacing: 0.165em;
+}
+footer .logoImg {
+  font-size: 20px;
+}
+footer .underLogo {
+  font-size: 10px;
+  margin-left: 7%;
+}
+footer .text,
+footer .contacts,
+footer .socialNetworks,
+footer .newsletter {
+  margin-top: 4%;
+}
+footer .text {
+  margin-left: 4%;
+}
+footer .text .words {
+  margin-top: 9%;
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  opacity: 0.8;
+  width: 50%;
+}
+footer .text .copyright {
+  margin-top: 15%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  text-decoration-line: underline;
+  color: #798189;
+  opacity: 0.6;
+}
+footer .contacts {
+  width: 15%;
+  margin-left: 9%;
+}
+footer .contacts figure {
+  display: flex;
+  flex-direction: row;
+  margin: 7% 0;
+}
+footer .contacts figure:first-child {
+  margin-top: 17%;
+}
+footer .contacts figure figcaption {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 150%;
+  color: #F6F0E9;
+  opacity: 0.8;
+  padding-left: 5%;
+}
+footer .contacts .bigFont {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #AE825D;
+}
+footer .socialNetworks {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  opacity: 0.8;
+  width: 12%;
+  margin-left: 10%;
+}
+footer .socialNetworks div {
+  margin-bottom: 12%;
+}
+footer .socialNetworks img {
+  margin-right: 7%;
+}
+footer .newsletter {
+  margin-left: auto;
+  padding-right: 4%;
+}
+footer .newsletter .join {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #AE825D;
+}
+footer .newsletter span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+}
+footer .newsletter span label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  margin-bottom: 4%;
+}
+footer .newsletter span input {
+  border: 1px solid #AE825D;
+  box-sizing: border-box;
+  padding: 16px 120px 19px 16px;
+}
+footer .newsletter span input::placeholder {
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #798189;
+  opacity: 0.6;
+}
+footer .newsletter .button {
+  background-color: #AE825D;
+  margin-top: 8%;
+  color: white !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  width: 55%;
+  padding: 16px 48px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+}
+footer .newsletter .button:hover {
+  background-color: #B8753D;
+  transform: scale(1.04);
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+.navigation div {
+  width: 56px;
+  height: 56px;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navigation div:hover {
+  transition: 0.4s;
+  transform: scale(1.04);
+}
+.navigation div.inactive {
+  opacity: 0.65;
+}
+.navigation .left {
+  margin-right: 24px;
+}
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circles span {
+  margin-right: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #798189;
+}
+.circles span:last-child {
+  margin-right: 0;
+}
+.circles #circle1,
+.circles #circle5 {
+  opacity: 0.6;
+}
+.circles .active {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  opacity: 1 !important;
+}
+#content {
+  margin-left: 8%;
+  font-family: Helvetica regular, sans-serif;
+}
+#content h1 {
+  font-size: 50pt;
+  line-height: 100%;
+  font-weight: normal;
+  margin-top: 8%;
+  margin-bottom: 5px;
+}
+#content .line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 20%;
+  position: absolute;
+  left: 0;
+  border: 1px solid black;
+}
+#content h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #798189;
+  margin-top: 1%;
+}
+#content #adImg {
+  position: relative;
+  left: 16%;
+  width: 55%;
+}
+#content #article {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  justify-content: center;
+  margin-left: -8%;
+}
+#content #article #firstCol,
+#content #article #secondCol,
+#content #article #thirdCol {
+  width: 20%;
+}
+#content #article #firstCol > div,
+#content #article #secondCol > div,
+#content #article #thirdCol > div {
+  margin-bottom: 2%;
+}
+#content #article #firstCol > div:last-child,
+#content #article #secondCol > div:last-child,
+#content #article #thirdCol > div:last-child {
+  margin-bottom: 0;
+}
+#content #article #secondCol,
+#content #article #thirdCol {
+  margin-left: 4%;
+}
+#content #article div > div {
+  position: relative;
+}
+#content #article .priceInPhoto {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: white;
+}
+#content #article .textInPhoto {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+}
+#content #article .textInPhoto h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22pt;
+  line-height: 140%;
+}
+#content #article .textInPhoto .buttonTextBlock {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+}
+#content #article .textInPhoto .buttonTextBlock .buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  align-items: center;
+}
+#content #article .textInPhoto .buttonTextBlock .buttons span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#content #article .textInPhoto .buttonTextBlock .buttons .button {
+  padding: 10px 20px;
+  background: #AE825D;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 30%;
+}
+#content #article .textInPhoto .buttonTextBlock .buttons .button:hover {
+  background-color: #B8753D;
+}
+#content #article .blackText {
+  color: black;
+}
+#content #article .whiteText {
+  color: white;
+}
+#content .navigation {
+  margin: 3% 0 3% 9%;
+}
+/*# sourceMappingURL=treatments.css.map */
