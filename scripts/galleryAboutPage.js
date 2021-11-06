@@ -1,5 +1,5 @@
-let left = $("#galleryMainPage .left");
-let right = $("#galleryMainPage .right");
+let left = $("#galleryAboutPage .left");
+let right = $("#galleryAboutPage .right");
 right.click(animatePhotosLeft);
 left.click(animatePhotosRight);
 let circle = 3;

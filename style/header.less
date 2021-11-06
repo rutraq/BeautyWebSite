@@ -5,7 +5,7 @@ body {
 
   header {
     height: 82px;
-    background: rgba(37, 37, 37, 0.8);
+    background: black;
     display: flex;
     flex-direction: row;
 
@@ -21,21 +21,6 @@ body {
       margin-left: 8%;
     }
 
-    .logoImg, .underLogo {
-      color: @orangeTextColor;
-      font-family: @fontFamilyHelvetica;
-      letter-spacing: 0.165em;
-    }
-
-    .logoImg {
-      font-size: 20px;
-    }
-
-    .underLogo {
-      font-size: 10px;
-      margin-left: 20%;
-    }
-
     #navButtons {
       display: flex;
       flex-direction: row;
@@ -43,9 +28,13 @@ body {
       align-self: center;
       margin-left: 16%;
 
+      #activePage {
+        border-bottom: 1px solid @lineHoverColor;
+      }
+
       div {
         cursor: pointer;
-        font-family: "Helvetica regular", sans-serif;
+        font-family: @fontFamilyHelvetica;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -53,11 +42,9 @@ body {
         letter-spacing: 0.055em;
         margin: 0 5px;
         padding: 10px;
-        transition-duration: 0.3s;
 
         &:hover {
-          transition-duration: 0.4s;
-          background-color: rgba(37, 37, 37, 0.2);
+          border-bottom: 1px solid @lineHoverColor;
         }
 
         &:first-child {
@@ -72,11 +59,11 @@ body {
 
     .bookAppointment {
       align-self: center;
-      color: white;
-      font-family: "Helvetica regular", sans-serif;
+      color: @goldColor;
+      font-family: @fontFamilyHelvetica;
       font-size: 14px;
       padding: 16px 48px;
-      background-color: @goldColor;
+      background-color: white;
       border-radius: 8px;
       margin-left: 10%;
       cursor: pointer;
@@ -85,7 +72,8 @@ body {
       &:hover {
         transition: 0.4s;
         transform: scale(1.04);
-        background-color: #B8753D;
+        background-color: @goldColor;
+        color: white;
       }
     }
   }

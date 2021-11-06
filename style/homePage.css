@@ -7,7 +7,7 @@ body {
 }
 body header {
   height: 82px;
-  background: rgba(37, 37, 37, 0.8);
+  background: black;
   display: flex;
   flex-direction: row;
 }
@@ -21,19 +21,6 @@ body header #logo {
   align-self: center;
   margin-left: 8%;
 }
-body header .logoImg,
-body header .underLogo {
-  color: #DBB32F;
-  font-family: Helvetica regular, sans-serif;
-  letter-spacing: 0.165em;
-}
-body header .logoImg {
-  font-size: 20px;
-}
-body header .underLogo {
-  font-size: 10px;
-  margin-left: 20%;
-}
 body header #navButtons {
   display: flex;
   flex-direction: row;
@@ -41,9 +28,12 @@ body header #navButtons {
   align-self: center;
   margin-left: 16%;
 }
+body header #navButtons #activePage {
+  border-bottom: 1px solid #DBB32F;
+}
 body header #navButtons div {
   cursor: pointer;
-  font-family: "Helvetica regular", sans-serif;
+  font-family: Helvetica regular, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -51,11 +41,9 @@ body header #navButtons div {
   letter-spacing: 0.055em;
   margin: 0 5px;
   padding: 10px;
-  transition-duration: 0.3s;
 }
 body header #navButtons div:hover {
-  transition-duration: 0.4s;
-  background-color: rgba(37, 37, 37, 0.2);
+  border-bottom: 1px solid #DBB32F;
 }
 body header #navButtons div:first-child {
   margin-left: 0;
@@ -65,11 +53,11 @@ body header #navButtons div:last-child {
 }
 body header .bookAppointment {
   align-self: center;
-  color: white;
-  font-family: "Helvetica regular", sans-serif;
+  color: #AE825D;
+  font-family: Helvetica regular, sans-serif;
   font-size: 14px;
   padding: 16px 48px;
-  background-color: #AE825D;
+  background-color: white;
   border-radius: 8px;
   margin-left: 10%;
   cursor: pointer;
@@ -78,7 +66,8 @@ body header .bookAppointment {
 body header .bookAppointment:hover {
   transition: 0.4s;
   transform: scale(1.04);
-  background-color: #B8753D;
+  background-color: #AE825D;
+  color: white;
 }
 .navigation {
   display: flex;
@@ -100,6 +89,10 @@ body header .bookAppointment:hover {
 }
 .navigation div.inactive {
   opacity: 0.65;
+  cursor: default;
+}
+.navigation div.inactive:hover {
+  transform: scale(1);
 }
 .navigation .left {
   margin-right: 24px;
@@ -373,7 +366,7 @@ footer .newsletter .button:hover {
 #content .button {
   align-self: center;
   color: #AE825D;
-  font-family: "Helvetica regular", sans-serif;
+  font-family: Helvetica regular, sans-serif;
   font-size: 14px;
   border: 1px solid #AE825D;
   box-sizing: border-box;
@@ -403,17 +396,17 @@ footer .newsletter .button:hover {
 #content #thirdArticle #textSecondArticle .bigFont {
   font-size: 65pt;
   line-height: 64px;
-  font-family: "Helvetica regular", sans-serif;
+  font-family: Helvetica regular, sans-serif;
 }
 #content #thirdArticle #textSecondArticle .mediumFont {
   margin-top: 7%;
-  font-family: "Helvetica regular", sans-serif;
+  font-family: Helvetica regular, sans-serif;
   font-size: 30pt;
   line-height: 32px;
   color: #432328;
 }
 #content #thirdArticle #textSecondArticle .smallFont {
-  font-family: "Helvetica regular", sans-serif;
+  font-family: Helvetica regular, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -440,7 +433,7 @@ footer .newsletter .button:hover {
   margin-bottom: 2%;
 }
 #content #secondArticle .bigFont {
-  font-family: "Helvetica regular", sans-serif;
+  font-family: Helvetica regular, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 50pt;
@@ -477,7 +470,7 @@ footer .newsletter .button:hover {
   margin-top: 2px;
 }
 #content #secondArticle .circles {
-  margin-top: 80px;
+  margin-top: 5%;
 }
 #content #fourthArticle {
   height: 90vh;
