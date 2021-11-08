@@ -149,14 +149,16 @@ body {
       display: flex;
       flex-direction: row;
       margin-top: 5%;
+      left: -3%;
+      position: relative;
 
       > div {
-        margin: auto;
         position: relative;
+        margin: auto 1% auto 0;
 
         .text {
           position: absolute;
-          bottom: 20%;
+          bottom: 5%;
           left: 10%;
           width: 100%;
 
@@ -174,22 +176,81 @@ body {
             margin-bottom: 5%;
             color: white;
           }
+
+          .buttonsGallery {
+            display: flex;
+            flex-direction: row;
+            margin-top: 10%;
+
+            div {
+              &:first-child {
+                font-size: 11pt;
+                line-height: 150%;
+                letter-spacing: 0.055em;
+                text-decoration-line: underline;
+                color: @goldColor;
+                margin: auto 0;
+                cursor: pointer;
+              }
+
+              &:nth-child(2) {
+                color: white;
+                background-color: @goldColor;
+                padding: 3% 8%;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: .4s;
+                margin-left: 25%;
+                line-height: 150%;
+
+                &:hover {
+                  background-color: @goldColorHover;
+                  transition: .3s;
+                  transform: scale(1.04);
+                }
+              }
+            }
+          }
         }
       }
 
       #photo2, #photo4 {
-        opacity: .6;
+
+        .text {
+          transform: scale(.9);
+          position: absolute;
+          left: 3%;
+
+          .bigFont, .smallFont {
+            color: #798189;
+          }
+        }
 
         img {
           width: 388px;
+          opacity: .8;
         }
       }
 
       #photo1, #photo5 {
-        opacity: .3;
+
+        .text {
+          transform: scale(.8);
+          position: absolute;
+          left: -3%;
+
+          .bigFont, .smallFont {
+            color: #798189;
+          }
+
+          .button {
+            padding: 10px 15px;
+          }
+        }
 
         img {
           width: 328px;
+          opacity: .6;
         }
       }
     }
@@ -201,6 +262,151 @@ body {
 
     .circles {
       margin-top: 5%;
+    }
+  }
+
+  #commentaries {
+    margin-top: 10%;
+    margin-bottom: 3%;
+
+    .commentWithNav {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      height: 38vh;
+      width: 50vw;
+
+      #comment {
+        position: relative;
+        margin: 0 2%;
+
+        img {
+          width: 10%;
+          margin: 0 auto;
+          position: absolute;
+          top: -7%;
+          left: 42%;
+        }
+
+        .commentText {
+          font-size: 12pt;
+          line-height: 150%;
+          text-align: center;
+          color: #666666;
+          padding: 0 15%;
+          margin-top: 10%;
+        }
+
+        .commentatorName {
+          font-size: 20pt;
+          line-height: 133%;
+          text-align: center;
+          letter-spacing: 0.04em;
+          margin-top: 5%;
+        }
+
+        .commentatorType {
+          font-size: 12pt;
+          line-height: 150%;
+          text-align: center;
+          letter-spacing: 0.055em;
+          color: #798189;
+          margin-top: 1%;
+        }
+      }
+
+      .navigation {
+        margin: auto 0;
+
+        .left, .right {
+          margin: 0;
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 53pt;
+      line-height: 64px;
+      font-weight: normal;
+    }
+
+    #comment {
+      display: flex;
+      flex-direction: column;
+      background-color: @beigeColor;
+      border-radius: 8px;
+    }
+
+  }
+
+  #certificates {
+    background-color: #EEDEBD;
+    position: relative;
+    padding-bottom: 5%;
+
+    .bigFont {
+      text-align: center;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 53pt;
+      line-height: 100%;
+      padding-top: 3%;
+    }
+
+    .smallFont {
+      font-size: 16pt;
+      line-height: 133%;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: #798189;
+      padding-left: 18%;
+    }
+
+    #certificatesGallery {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      left: -5%;
+      margin-top: 3%;
+
+      img {
+        margin-right: 0.8%;
+      }
+
+      #certificate1, #certificate5 {
+        opacity: .3;
+      }
+
+      #certificate2, #certificate4 {
+        opacity: .6;
+      }
+    }
+
+    #leftClick {
+      position: absolute;
+      left: 2%;
+      bottom: 35%;
+    }
+
+    #rightClick {
+      position: absolute;
+      right: 2%;
+      bottom: 35%;
+    }
+
+    #leftClick, #rightClick {
+      cursor: pointer;
+      transition: .4s;
+
+      &:hover {
+        transform: scale(1.08);
+        transition: .3s;
+      }
+    }
+
+    .circles {
+      margin-top: 2%;
     }
   }
 

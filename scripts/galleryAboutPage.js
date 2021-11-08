@@ -55,5 +55,5 @@ function changeCircles(n) {
     } else if (previousCircle === 1 && circle === 2) {
         left.removeClass("inactive").css("cursor", "pointer");
     }
-    $(`.circles #circle${circle}`).addClass("active");
+    $(`.circles .circle${circle}`).addClass("active");
 }

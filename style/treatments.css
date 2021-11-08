@@ -268,8 +268,8 @@ footer .newsletter .button:hover {
 .circles span:last-child {
   margin-right: 0;
 }
-.circles #circle1,
-.circles #circle5 {
+.circles .circle1,
+.circles .circle5 {
   opacity: 0.6;
 }
 .circles .active {
