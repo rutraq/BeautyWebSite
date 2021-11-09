@@ -273,7 +273,7 @@ body {
       display: flex;
       flex-direction: row;
       margin: 0 auto;
-      height: 38vh;
+      height: 42%;
       width: 50vw;
 
       #comment {
@@ -312,6 +312,7 @@ body {
           letter-spacing: 0.055em;
           color: #798189;
           margin-top: 1%;
+          margin-bottom: 3%;
         }
       }
 
@@ -421,5 +422,36 @@ body {
     line-height: 150%;
     color: #798189;
     padding-right: 15%;
+  }
+
+  @media all and (max-width: 1550px) {
+    #photoArticle #textAndNav {
+      .navigation {
+        left: 80%;
+      }
+    }
+
+    #specialists {
+      .gallery {
+        left: -15%;
+      }
+    }
+
+    #commentaries {
+      .commentWithNav {
+        #comment {
+          .commentatorName {
+            font-size: 17pt;
+            margin-top: 3%;
+          }
+        }
+      }
+    }
+
+    #certificates {
+      #certificatesGallery {
+        left: -18%;
+      }
+    }
   }
 }

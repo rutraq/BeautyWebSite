@@ -69,6 +69,11 @@ body header .bookAppointment:hover {
   background-color: #AE825D;
   color: white;
 }
+@media all and (max-width: 1550px) {
+  body header #navButtons {
+    margin-left: 9%;
+  }
+}
 .navigation {
   display: flex;
   flex-direction: row;
