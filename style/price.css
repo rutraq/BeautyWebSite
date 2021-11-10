@@ -1,0 +1,334 @@
+@font-face {
+  font-family: Helvetica regular;
+  src: url("fonts/helvetica_regular.otf");
+}
+body {
+  margin: 0;
+}
+body header {
+  height: 82px;
+  background: black;
+  display: flex;
+  flex-direction: row;
+}
+body header a {
+  text-decoration: none;
+  color: white;
+}
+body header #logo {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: 8%;
+}
+body header #navButtons {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-self: center;
+  margin-left: 16%;
+}
+body header #navButtons #activePage {
+  border-bottom: 1px solid #DBB32F;
+}
+body header #navButtons div {
+  cursor: pointer;
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  margin: 0 5px;
+  padding: 10px;
+}
+body header #navButtons div:hover {
+  border-bottom: 1px solid #DBB32F;
+}
+body header #navButtons div:first-child {
+  margin-left: 0;
+}
+body header #navButtons div:last-child {
+  margin-right: 0;
+}
+body header .bookAppointment {
+  align-self: center;
+  color: #AE825D;
+  font-family: Helvetica regular, sans-serif;
+  font-size: 14px;
+  padding: 16px 48px;
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 10%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body header .bookAppointment:hover {
+  transition: 0.4s;
+  transform: scale(1.04);
+  background-color: #AE825D;
+  color: white;
+}
+@media all and (max-width: 1550px) {
+  body header #navButtons {
+    margin-left: 9%;
+  }
+}
+footer {
+  background-color: #252525;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  font-family: Helvetica regular, sans-serif;
+}
+footer .logoImg,
+footer .underLogo {
+  color: #DBB32F;
+  font-family: Helvetica regular, sans-serif;
+  letter-spacing: 0.165em;
+}
+footer .logoImg {
+  font-size: 20px;
+}
+footer .underLogo {
+  font-size: 10px;
+  margin-left: 7%;
+}
+footer .text,
+footer .contacts,
+footer .socialNetworks,
+footer .newsletter {
+  margin-top: 4%;
+}
+footer .text {
+  margin-left: 4%;
+}
+footer .text .words {
+  margin-top: 9%;
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  opacity: 0.8;
+  width: 50%;
+}
+footer .text .copyright {
+  margin-top: 15%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  text-decoration-line: underline;
+  color: #798189;
+  opacity: 0.6;
+}
+footer .contacts {
+  width: 15%;
+  margin-left: 9%;
+}
+footer .contacts figure {
+  display: flex;
+  flex-direction: row;
+  margin: 7% 0;
+}
+footer .contacts figure:first-child {
+  margin-top: 17%;
+}
+footer .contacts figure figcaption {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12pt;
+  line-height: 150%;
+  color: #F6F0E9;
+  opacity: 0.8;
+  padding-left: 5%;
+}
+footer .contacts .bigFont {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #AE825D;
+}
+footer .socialNetworks {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  opacity: 0.8;
+  width: 12%;
+  margin-left: 10%;
+}
+footer .socialNetworks div {
+  margin-bottom: 12%;
+}
+footer .socialNetworks img {
+  margin-right: 7%;
+}
+footer .newsletter {
+  margin-left: auto;
+  padding-right: 4%;
+}
+footer .newsletter .join {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #AE825D;
+}
+footer .newsletter span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+}
+footer .newsletter span label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11pt;
+  line-height: 150%;
+  letter-spacing: 0.055em;
+  color: #F6F0E9;
+  margin-bottom: 4%;
+}
+footer .newsletter span input {
+  border: 1px solid #AE825D;
+  box-sizing: border-box;
+  padding: 16px 120px 19px 16px;
+}
+footer .newsletter span input::placeholder {
+  font-family: Helvetica regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #798189;
+  opacity: 0.6;
+}
+footer .newsletter .button {
+  background-color: #AE825D;
+  margin-top: 8%;
+  color: white !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 150%;
+  width: 55%;
+  padding: 16px 48px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+}
+footer .newsletter .button:hover {
+  background-color: #B8753D;
+  transform: scale(1.04);
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+.navigation div {
+  width: 56px;
+  height: 56px;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navigation div:hover {
+  transition: 0.4s;
+  transform: scale(1.04);
+}
+.navigation div.inactive {
+  opacity: 0.65;
+  cursor: default;
+}
+.navigation div.inactive:hover {
+  transform: scale(1);
+}
+.navigation .left {
+  margin-right: 24px;
+}
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circles span {
+  margin-right: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #798189;
+}
+.circles span:last-child {
+  margin-right: 0;
+}
+.circles .circle1,
+.circles .circle5 {
+  opacity: 0.6;
+}
+.circles .active {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  opacity: 1 !important;
+}
+body {
+  font-family: Helvetica regular, sans-serif;
+}
+body h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50pt;
+  text-align: center;
+  background: linear-gradient(to right, #EEDEBD 65%, transparent 50%);
+  margin-top: 5%;
+}
+body h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22pt;
+  line-height: 140%;
+  margin-left: 7%;
+  margin-bottom: 0.5%;
+}
+body .line {
+  height: 1px;
+  width: 23%;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+body #content #firstArticle {
+  justify-content: center;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+}
+body #content #firstArticle .firstCol,
+body #content #firstArticle .secondCol {
+  width: 25%;
+}
+body #content #firstArticle .firstCol > div,
+body #content #firstArticle .secondCol > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body #content #firstArticle .head {
+  font-size: 22pt;
+  line-height: 140%;
+  text-align: center;
+  background-color: #252525;
+  color: #EEDEBD;
+}
+/*# sourceMappingURL=price.css.map */
