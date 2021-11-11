@@ -308,6 +308,9 @@ body .line {
   box-sizing: border-box;
   border: 1px solid black;
 }
+body #content {
+  margin-bottom: 5%;
+}
 body #content #firstArticle {
   justify-content: center;
   margin-top: 3%;
@@ -316,19 +319,49 @@ body #content #firstArticle {
 }
 body #content #firstArticle .firstCol,
 body #content #firstArticle .secondCol {
-  width: 25%;
+  width: 30%;
 }
 body #content #firstArticle .firstCol > div,
 body #content #firstArticle .secondCol > div {
   width: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid #AE825D;
+  box-sizing: border-box;
+}
+body #content #firstArticle .firstCol ul,
+body #content #firstArticle .secondCol ul {
+  margin-left: 7%;
+  margin-top: 5%;
+  padding-left: 0;
+}
+body #content #firstArticle .firstCol li,
+body #content #firstArticle .secondCol li {
+  list-style-type: none;
+  font-size: 15pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  position: relative;
+  margin-bottom: 2%;
+}
+body #content #firstArticle .firstCol li:last-child,
+body #content #firstArticle .secondCol li:last-child {
+  margin-bottom: 3%;
+}
+body #content #firstArticle .firstCol li span:last-child,
+body #content #firstArticle .secondCol li span:last-child {
+  position: absolute;
+  right: 7%;
+}
+body #content #firstArticle .firstCol {
+  margin-right: 5%;
 }
 body #content #firstArticle .head {
-  font-size: 22pt;
+  font-size: 20pt;
   line-height: 140%;
   text-align: center;
   background-color: #252525;
   color: #EEDEBD;
+  padding: 3% 0;
 }
 /*# sourceMappingURL=price.css.map */
