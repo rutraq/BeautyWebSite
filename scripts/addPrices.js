@@ -49,6 +49,104 @@ let otherServices = [
     {"name": "Stitch removal", "price": "30$"},
     {"name": "General blood test", "price": "from 35$"}
 ];
+let botulinum = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Increased sweating treatment injections (armpits, palms, feet area)", "price": "from 35$"}
+];
+let injections = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"}
+];
+let cosmetology = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"}
+];
+let traumatology = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"}
+];
+let hyaluronic = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"}
+];
+let vascularSurgery = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"}
+];
+let neurosurgery = [
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"},
+    {"name": "General blood test", "price": "from 35$"},
+    {"name": "Change of the dressing", "price": "30$"},
+    {"name": "Stitch removal", "price": "30$"}
+];
 
 $(document).ready(function () {
     addPrice(facial, "facialSurgery");
@@ -56,6 +154,13 @@ $(document).ready(function () {
     addPrice(breastSurgery, "breastSurgery");
     addPrice(otherSurgery, "otherSurgery");
     addPrice(otherServices, "otherServices");
+    addPrice(botulinum, "botulinum");
+    addPrice(injections, "injections");
+    addPrice(cosmetology, "cosmetology");
+    addPrice(traumatology, "traumatology");
+    addPrice(hyaluronic, "hyaluronic");
+    addPrice(vascularSurgery, "vascularSurgery");
+    addPrice(neurosurgery, "neurosurgery");
 
     function addPrice(db, ulId) {
         for (let x = 0; x < db.length; x++) {
