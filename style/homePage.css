@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
   font-family: Helvetica regular;
   src: url("fonts/helvetica_regular.otf");
 }
@@ -132,7 +139,7 @@ footer {
   height: 40vh;
   display: flex;
   flex-direction: row;
-  font-family: Helvetica regular, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 footer .logoImg,
 footer .underLogo {
@@ -278,10 +285,12 @@ footer .newsletter .button {
   box-sizing: border-box;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.4s;
 }
 footer .newsletter .button:hover {
   background-color: #B8753D;
   transform: scale(1.04);
+  transition: 0.3s;
 }
 #content #firstGirl {
   min-width: 100%;
