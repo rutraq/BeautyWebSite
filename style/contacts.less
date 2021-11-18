@@ -7,6 +7,7 @@
 
   #questions {
     position: relative;
+    margin-bottom: 10%;
 
     img {
       width: 100vw;
@@ -51,6 +52,7 @@
         color: @goldColor;
         width: 14%;
         margin-right: 1%;
+        text-overflow: ellipsis;
 
         &::placeholder {
           font-family: @fontFamilyHelvetica;
@@ -81,5 +83,34 @@
         }
       }
     }
+  }
+
+  #contacts {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 1%;
+    margin: 0 10% 3% 10%;
+
+    a {
+      text-decoration: none;
+      color: #798189;
+
+      &:first-child, &:last-child {
+        font-size: 12pt;
+        line-height: 150%;
+        letter-spacing: 0.055em;
+      }
+
+      &:nth-child(2) {
+        font-size: 25pt;
+        line-height: 140%;
+        margin: 0 15%;
+      }
+    }
+  }
+
+  #map {
+    width: 100vw;
+    height: 100vh;
   }
 }
