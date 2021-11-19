@@ -163,17 +163,21 @@ $(document).ready(function () {
     addPrice(neurosurgery, "neurosurgery");
 
     function addPrice(db, ulId) {
-        for (let x = 0; x < db.length; x++) {
-            let serializedUser = JSON.stringify(db[x]);
-            let user = JSON.parse(serializedUser);
-            let li = document.createElement("li");
-            let name = document.createElement("div");
-            let price = document.createElement("div");
-            name.innerText = user.name;
-            price.innerText = user.price;
-            li.append(name);
-            li.append(price);
-            $(`#${ulId} ul`).append(li);
+        if (db.length !== 0) {
+            for (let x = 0; x < db.length; x++) {
+                let serializedUser = JSON.stringify(db[x]);
+                let user = JSON.parse(serializedUser);
+                let li = document.createElement("li");
+                let name = document.createElement("div");
+                let price = document.createElement("div");
+                name.innerText = user.name;
+                price.innerText = user.price;
+                li.append(name);
+                li.append(price);
+                $(`#${ulId} ul`).append(li);
+            }
+        } else {
+            $(`#${ulId}`).css("display", "none");
         }
     }
 })
