@@ -1,12 +1,6 @@
-async function getData() {
+$(document).not(function () {
     $.getJSON('http://localhost:5000/get-text?page=about', function(data) {
-        return data;
+        $("#firstArticle .bigFont").text(data.about_article1_slogan);
+        $("#firstArticle .smallFont").text(data.about_article1);
     });
-}
-
-function insertText() {
-    let text = getData();
-    $("#firstArticle .bigFont").text(text.about_article1_slogan);
-}
-
-insertText();
+})
