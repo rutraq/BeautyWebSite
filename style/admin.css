@@ -1,5 +1,61 @@
-#button {
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: Helvetica regular;
+  src: url("fonts/helvetica_regular.otf");
+}
+body {
+  margin: 0;
+  background: rgba(37, 37, 37, 0.5);
+  position: relative;
+}
+#loginBlock {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  width: 20%;
+  background-color: white;
+  margin: 12% auto 0 auto;
+  align-self: center;
+  padding: 1% 2% 1% 2%;
+}
+#loginBlock input {
+  padding: 3% 0 3% 3%;
+}
+#loginBlock label {
+  margin-top: 7%;
+  margin-bottom: 3%;
+  font-size: 12pt;
+  line-height: 150%;
+}
+#loginBlock span {
+  font-size: 18pt;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+}
+#loginBlock #button {
+  margin: 9% auto 9% auto;
+  padding: 10px 36px;
+  background-color: #AE825D;
+  border-radius: 8px;
+  font-size: 12pt;
+  line-height: 150%;
+  color: white;
   cursor: pointer;
-  padding: 5px 15px;
+  transition: 0.4s;
+}
+#loginBlock #button:hover {
+  background-color: #B8753D;
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+#loginBlock #button:active {
+  transform: scale(1);
+  transition: 0.2s;
 }
 /*# sourceMappingURL=admin.css.map */

@@ -1,4 +1,58 @@
-#button {
-  cursor: pointer;
-  padding: 5px 15px;
+@import "variables";
+
+body {
+  margin: 0;
+  background: rgba(37, 37, 37, 0.5);
+  position: relative;
+}
+
+#loginBlock {
+  display: flex;
+  flex-direction: column;
+  font-family: @fontMontserrat;
+  width: 20%;
+  background-color: white;
+  margin: 12% auto 0 auto;
+  align-self: center;
+  padding: 1% 2% 1% 2%;
+
+  input {
+    padding: 3% 0 3% 3%;
+  }
+
+  label {
+    margin-top: 7%;
+    margin-bottom: 3%;
+    font-size: 12pt;
+    line-height: 150%;
+  }
+
+  span {
+    font-size: 18pt;
+    line-height: 133%;
+    letter-spacing: 0.04em;
+  }
+
+  #button {
+    margin: 9% auto 9% auto;
+    padding: 10px 36px;
+    background-color: @goldColor;
+    border-radius: 8px;
+    font-size: 12pt;
+    line-height: 150%;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+
+    &:hover {
+      background-color: @goldColorHover;
+      transform: scale(1.04);
+      transition: .3s;
+    }
+
+    &:active {
+      transform: scale(1);
+      transition: .2s;
+    }
+  }
 }
