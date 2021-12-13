@@ -30,16 +30,6 @@ function loginWithToken() {
     });
 }
 
-function request(url, method, query) {
-    $.ajax({
-        url: url + query,
-        method: method,
-        xhrFields: {
-            withCredentials: true
-        }
-    });
-}
-
 $(document).ready(function () {
     loginWithToken();
 });

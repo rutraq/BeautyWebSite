@@ -1,11 +1,14 @@
 $(document).not(function () {
     $.getJSON('http://localhost:5000/get-text?page=about', function(data) {
-        $("#t").val(data.article1_slogan);
-        $("#t2").val(data.article1);
+        $.each( data, function(key, val) {
+            $(`<label for=${key}><input id=${key}>`);
+        });
+        $("#article1_slogan").val(data.article1_slogan);
+        $("#article1").val(data.article1);
     });
 
-    $("#t").on("change", function () { changedText(this) });
-    $("#t2").on("change", function () { changedText(this) });
+    $("#article1_slogan").on("change", function () { changedText(this) });
+    $("#article1").on("change", function () { changedText(this) });
     $("#button").click(function () {
         makeListForUpdate();
     });
@@ -16,9 +19,9 @@ function changedText(input) {
 }
 
 function makeListForUpdate() {
-    let update = $(".changed")
+    let update = $(".changed");
     for (let i = 0; i < update.length; i++) {
-
+        uploadText($(update[i]).attr("id"), $(update[i]).val());
     }
 }
 
