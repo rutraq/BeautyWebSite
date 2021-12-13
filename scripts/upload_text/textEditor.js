@@ -1,8 +1,8 @@
 $(document).not(function () {
-    $.getJSON('http://localhost:5000/get-text?page=about', function (data) {
+    $.getJSON(`http://localhost:5000/get-text?page=${ $(document).find("title").text() }`, function (data) {
         $.each(data, function (key, val) {
-            $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><input id=${key} value="${val}"></td></tr>`));
-            $(`#${key}`).on("change", function () {
+            $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><textarea id=${key} rows="10" cols="65"></td></tr>`));
+            $(`#${key}`).val(val).on("change", function () {
                 changedText(this)
             });
         });
@@ -25,7 +25,7 @@ function makeListForUpdate() {
 
 function uploadText(text_id, text) {
     $.ajax({
-        url: `http://localhost:5000/change-text?db=text&page=about&id=${text_id}&text=${text}`,
+        url: `http://localhost:5000/change-text?db=text&page=${ $(document).find("title").text() }&id=${text_id}&text=${text}`,
         method: "post",
         xhrFields: {
             withCredentials: true

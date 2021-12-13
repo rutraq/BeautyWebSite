@@ -1,8 +1,44 @@
-#editor {
-  display: flex;
-  flex-direction: column;
+@import "variables";
 
-  div label {
-    width: 30%;
+table {
+  width: 50%;
+  margin: 0 auto 3% auto;
+  font-family: @fontMontserrat;
+
+  td {
+    padding-right: 15px;
+
+    textarea {
+      font-size: 12pt;
+      font-family: @fontMontserrat;
+      font-weight: normal;
+    }
   }
 }
+
+#button {
+  padding: 10px 36px;
+  background-color: @goldColor;
+  border-radius: 8px;
+  font-size: 12pt;
+  line-height: 150%;
+  color: white;
+  cursor: pointer;
+  transition: .4s;
+  width: 10%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  &:hover {
+    background-color: @goldColorHover;
+    transform: scale(1.04);
+    transition: .3s;
+  }
+
+  &:active {
+    transform: scale(1);
+    transition: .2s;
+  }
+}
+
