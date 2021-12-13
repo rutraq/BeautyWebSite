@@ -1,12 +1,12 @@
 $(document).not(function () {
-    $.getJSON('http://localhost:5000/get-text?page=about', function(data) {
-        $.each( data, function(key, val) {
+    $.getJSON('http://localhost:5000/get-text?page=about', function (data) {
+        $.each(data, function (key, val) {
             $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><input id=${key} value="${val}"></td></tr>`));
+            $(`#${key}`).on("change", function () {
+                changedText(this)
+            });
         });
     });
-
-    $("#article1_slogan").on("change", function () { changedText(this) });
-    $("#article1").on("change", function () { changedText(this) });
     $("#button").click(function () {
         makeListForUpdate();
     });
@@ -30,16 +30,10 @@ function uploadText(text_id, text) {
         xhrFields: {
             withCredentials: true
         },
-        success: function(data) {
+        success: function (data) {
             if (data.message === "expired signature") {
                 request("http://localhost:5000/refresh-token", "get", "");
-                $.ajax({
-                    url: `http://localhost:5000/change-text?db=text&page=about&id=${text_id}&text=${text}`,
-                    method: "post",
-                    xhrFields: {
-                        withCredentials: true
-                    }
-                });
+                uploadText(text_id, text);
             }
         }
     });
