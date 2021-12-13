@@ -1,10 +1,8 @@
 $(document).not(function () {
     $.getJSON('http://localhost:5000/get-text?page=about', function(data) {
         $.each( data, function(key, val) {
-            $(`<label for=${key}><input id=${key}>`);
+            $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><input id=${key} value="${val}"></td></tr>`));
         });
-        $("#article1_slogan").val(data.article1_slogan);
-        $("#article1").val(data.article1);
     });
 
     $("#article1_slogan").on("change", function () { changedText(this) });
