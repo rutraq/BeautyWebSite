@@ -38,8 +38,33 @@ function uploadText(text_id, text) {
         }
     });
 }
+$("#button2").click(function () {
+    uploadPhoto($("#fileSelect"));
+});
 
-function request(url, method, query) {
+function uploadPhoto(input) {
+    let inputFile = $(input);
+    let formData = new FormData;
+
+    formData.append('img', inputFile.prop('files')[0]);
+    $.ajax({
+        url: `http://localhost:5000/upload-file`,
+        method: "post",
+        data: formData,
+        processData: false,
+        contentType: false,
+        xhrFields: {
+            withCredentials: true
+        },
+        success: function (data) {
+            if (data.message === "expired signature") {
+                request("http://localhost:5000/refresh-token", "get", "");
+            }
+        }
+    });
+}
+
+function request(url, method, query, callback) {
     $.ajax({
         url: url + query,
         method: method,
