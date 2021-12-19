@@ -16,7 +16,28 @@ table {
   }
 }
 
-#button {
+#photoEdit {
+  margin-top: 5%;
+  margin-bottom: 3%;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      cursor: pointer;
+      width: 500px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+#button, #button2 {
   padding: 10px 36px;
   background-color: @goldColor;
   border-radius: 8px;

@@ -3,17 +3,39 @@ $(document).not(function () {
         $.each(data, function (key, val) {
             $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><textarea id=${key} rows="10" cols="65"></td></tr>`));
             $(`#${key}`).val(val).on("change", function () {
-                changedText(this)
+                $(this).addClass("changed");
             });
         });
     });
-    $("#button").click(function () {
-        makeListForUpdate();
+    $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
+        $.each(data, function (key, val) {
+            $("#photoEdit").append($(`<div><img src=${val} id="${key}" alt="photo"><input id="inp${key}" type="file" accept="jpg, img, jpeg, png, svg"/></div>`));
+            $(`#${key}`).on("click", function () {
+                $(`#inp${key}`).click();
+            });
+            $(`#inp${key}`).on("change", function (e) {
+                $(this).addClass("changedPhoto");
+                if ($(this).val() !== "") {
+                    $("#photoEdit > div img").remove();
+                    $("#photoEdit > div").append($(`<img src=${URL.createObjectURL(e.target.files[0])} alt="photo" id="${key}">`));
+                    $(`#${key}`).on("click", function () {
+                        $(`#inp${key}`).click();
+                    });
+                }
+            });
+        });
     });
 });
 
-function changedText(input) {
-    $(input).addClass("changed");
+$("#button").click(function () {
+    makeListForUpdate();
+});
+
+function makePhotoForUpdate() {
+    let update = $(".changedPhoto");
+    for (let i = 0; i < update.length; i++) {
+        uploadPhoto(update[i]);
+    }
 }
 
 function makeListForUpdate() {
@@ -32,15 +54,26 @@ function uploadText(text_id, text) {
         },
         success: function (data) {
             if (data.message === "expired signature") {
-                request("http://localhost:5000/refresh-token", "get", "");
-                uploadText(text_id, text);
+                if (data.message === "expired signature") {
+                    $.ajax({
+                        url: "http://localhost:5000/refresh-token",
+                        method: "get",
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        success: function () {
+                            uploadText(text_id, text);
+                        }
+                    });
+                }
             }
         }
     });
 }
 $("#button2").click(function () {
-    uploadPhoto($("#fileSelect"));
+    makePhotoForUpdate();
 });
+
 
 function uploadPhoto(input) {
     let inputFile = $(input);
@@ -48,7 +81,7 @@ function uploadPhoto(input) {
 
     formData.append('img', inputFile.prop('files')[0]);
     $.ajax({
-        url: `http://localhost:5000/upload-file`,
+        url: `http://localhost:5000/change-photo?page=about`,
         method: "post",
         data: formData,
         processData: false,
@@ -58,18 +91,17 @@ function uploadPhoto(input) {
         },
         success: function (data) {
             if (data.message === "expired signature") {
-                request("http://localhost:5000/refresh-token", "get", "");
+                $.ajax({
+                    url: "http://localhost:5000/refresh-token",
+                    method: "get",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function () {
+                        uploadPhoto(input);
+                    }
+                });
             }
-        }
-    });
-}
-
-function request(url, method, query, callback) {
-    $.ajax({
-        url: url + query,
-        method: method,
-        xhrFields: {
-            withCredentials: true
         }
     });
 }

@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: Helvetica regular;
+  src: url("fonts/helvetica_regular.otf");
+}
+table {
+  width: 50%;
+  margin: 0 auto 3% auto;
+  font-family: 'Montserrat', sans-serif;
+}
+table td {
+  padding-right: 15px;
+}
+table td textarea {
+  font-size: 12pt;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+#photoEdit {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+#photoEdit > div {
+  display: flex;
+  flex-direction: row;
+}
+#photoEdit > div img {
+  cursor: pointer;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#photoEdit > div input {
+  display: none;
+}
+#button,
+#button2 {
+  padding: 10px 36px;
+  background-color: #AE825D;
+  border-radius: 8px;
+  font-size: 12pt;
+  line-height: 150%;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 10%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+#button:hover,
+#button2:hover {
+  background-color: #B8753D;
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+#button:active,
+#button2:active {
+  transform: scale(1);
+  transition: 0.2s;
+}
+/*# sourceMappingURL=textEditor.css.map */
