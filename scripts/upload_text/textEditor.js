@@ -74,14 +74,18 @@ $("#button2").click(function () {
     makePhotoForUpdate();
 });
 
+$("#button3").click(function () {
+    uploadPhoto($("#newFile"), $("#page").val(), $("#id").val())
+});
 
-function uploadPhoto(input) {
+
+function uploadPhoto(input, page, id) {
     let inputFile = $(input);
     let formData = new FormData;
 
     formData.append('img', inputFile.prop('files')[0]);
     $.ajax({
-        url: `http://localhost:5000/change-photo?page=about`,
+        url: `http://localhost:5000/change-photo?page=${page}&id=${id}`,
         method: "post",
         data: formData,
         processData: false,
@@ -98,7 +102,7 @@ function uploadPhoto(input) {
                         withCredentials: true
                     },
                     success: function () {
-                        uploadPhoto(input);
+                        uploadPhoto(input, page, id);
                     }
                 });
             }
