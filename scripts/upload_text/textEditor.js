@@ -1,4 +1,23 @@
 $(document).not(function () {
+    $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
+        $.each(data, function (key, val) {
+            console.log(val);
+            $("#photoEdit").append($(`<div id="div${key}"><img src="${val}" id="${key}" alt="photo"><input id="inp${key}" type="file" accept="jpg, img, jpeg, png, svg"/></div>`));
+            $(`#${key}`).on("click", function () {
+                $(`#inp${key}`).click();
+            });
+            $(`#inp${key}`).on("change", function (e) {
+                $(this).addClass("changedPhoto");
+                if ($(this).val() !== "") {
+                    $(`#${key}`).remove();
+                    $(`#photoEdit > #div${key}`).append($(`<img src=${URL.createObjectURL(e.target.files[0])} alt="photo" id="${key}">`)).on("click", function () {
+                        $(`#inp${key}`).click();
+                    });
+                    uploadPhoto($(this), "about", key)
+                }
+            });
+        });
+    });
     $.getJSON(`http://localhost:5000/get-text?page=${ $(document).find("title").text() }`, function (data) {
         $.each(data, function (key, val) {
             $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><textarea id=${key} rows="10" cols="65"></td></tr>`));
@@ -7,36 +26,11 @@ $(document).not(function () {
             });
         });
     });
-    $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
-        $.each(data, function (key, val) {
-            $("#photoEdit").append($(`<div><img src=${val} id="${key}" alt="photo"><input id="inp${key}" type="file" accept="jpg, img, jpeg, png, svg"/></div>`));
-            $(`#${key}`).on("click", function () {
-                $(`#inp${key}`).click();
-            });
-            $(`#inp${key}`).on("change", function (e) {
-                $(this).addClass("changedPhoto");
-                if ($(this).val() !== "") {
-                    $("#photoEdit > div img").remove();
-                    $("#photoEdit > div").append($(`<img src=${URL.createObjectURL(e.target.files[0])} alt="photo" id="${key}">`));
-                    $(`#${key}`).on("click", function () {
-                        $(`#inp${key}`).click();
-                    });
-                }
-            });
-        });
-    });
 });
 
 $("#button").click(function () {
     makeListForUpdate();
 });
-
-function makePhotoForUpdate() {
-    let update = $(".changedPhoto");
-    for (let i = 0; i < update.length; i++) {
-        uploadPhoto(update[i]);
-    }
-}
 
 function makeListForUpdate() {
     let update = $(".changed");
@@ -47,7 +41,7 @@ function makeListForUpdate() {
 
 function uploadText(text_id, text) {
     $.ajax({
-        url: `http://localhost:5000/change-text?db=text&page=${ $(document).find("title").text() }&id=${text_id}&text=${text}`,
+        url: `http://localhost:5000/change-text?db=text&page=${$(document).find("title").text()}&id=${text_id}&text=${text}`,
         method: "post",
         xhrFields: {
             withCredentials: true
@@ -70,6 +64,7 @@ function uploadText(text_id, text) {
         }
     });
 }
+
 $("#button2").click(function () {
     makePhotoForUpdate();
 });
