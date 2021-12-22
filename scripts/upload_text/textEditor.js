@@ -1,7 +1,6 @@
 $(document).not(function () {
     $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
         $.each(data, function (key, val) {
-            console.log(val);
             $("#photoEdit").append($(`<div id="div${key}"><img src="${val}" id="${key}" alt="photo"><input id="inp${key}" type="file" accept="jpg, img, jpeg, png, svg"/></div>`));
             $(`#${key}`).on("click", function () {
                 $(`#inp${key}`).click();
@@ -32,6 +31,10 @@ $("#button").click(function () {
     makeListForUpdate();
 });
 
+$("button").click(function () {
+    uploadText($("#id").val(), $("#text").val());
+});
+
 function makeListForUpdate() {
     let update = $(".changed");
     for (let i = 0; i < update.length; i++) {
@@ -41,7 +44,7 @@ function makeListForUpdate() {
 
 function uploadText(text_id, text) {
     $.ajax({
-        url: `http://localhost:5000/change-text?db=text&page=${$(document).find("title").text()}&id=${text_id}&text=${text}`,
+        url: `http://localhost:5000/change-text?db=text&page=contacts&id=${text_id}&text=${text}`,
         method: "post",
         xhrFields: {
             withCredentials: true

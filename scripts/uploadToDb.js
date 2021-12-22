@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    // let images = $("#content img");
-    // $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
-    //     $.each(data, function (key, val) {
-    //         images[key - 1].src = val;
-    //     });
-    // });
-    upload();
+    let images = $("#content img");
+    $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
+        $.each(data, function (key, val) {
+            images[key - 1].src = val;
+        });
+    });
+    // upload();
 });
 
 function upload() {

@@ -29,18 +29,18 @@ table td textarea {
 #photoEdit > div {
   display: flex;
   flex-direction: row;
+  margin-bottom: 3%;
 }
 #photoEdit > div img {
   cursor: pointer;
-  width: 500px;
+  width: 800px;
   margin-right: auto;
   margin-left: auto;
 }
 #photoEdit > div input {
   display: none;
 }
-#button,
-#button2 {
+#button {
   padding: 10px 36px;
   background-color: #AE825D;
   border-radius: 8px;
@@ -54,14 +54,12 @@ table td textarea {
   margin-right: auto;
   margin-left: auto;
 }
-#button:hover,
-#button2:hover {
+#button:hover {
   background-color: #B8753D;
   transform: scale(1.04);
   transition: 0.3s;
 }
-#button:active,
-#button2:active {
+#button:active {
   transform: scale(1);
   transition: 0.2s;
 }
