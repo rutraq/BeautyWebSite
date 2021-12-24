@@ -1,5 +1,6 @@
 $(document).not(function () {
-    $.getJSON(`http://localhost:5000/get-photo?page=${ $(document).find("title").text() }`, function (data) {
+    let name = $(document).find("title").text();
+    $.getJSON(`http://localhost:5000/get-photo?page=${name}`, function (data) {
         $.each(data, function (key, val) {
             $("#photoEdit").append($(`<div id="div${key}"><img src="${val}" id="${key}" alt="photo"><input id="inp${key}" type="file" accept="jpg, img, jpeg, png, svg"/></div>`));
             $(`#${key}`).on("click", function () {
@@ -17,14 +18,25 @@ $(document).not(function () {
             });
         });
     });
-    $.getJSON(`http://localhost:5000/get-text?page=${ $(document).find("title").text() }`, function (data) {
-        $.each(data, function (key, val) {
-            $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><textarea id=${key} rows="10" cols="65"></td></tr>`));
-            $(`#${key}`).val(val).on("change", function () {
-                $(this).addClass("changed");
+    if (name !== "prices") {
+        $.getJSON(`http://localhost:5000/get-text?db=text&page=${name}`, function (data) {
+            $.each(data, function (key, val) {
+                $("body table").append($(`<tr><td><label for=${key}>${key}</label></td><td><textarea id=${key} rows="10" cols="65"></textarea></td></tr>`));
+                $(`#${key}`).val(val).on("change", function () {
+                    $(this).addClass("changed");
+                });
             });
         });
-    });
+    } else {
+        $.getJSON(`http://localhost:5000/get-text?db=prices&page=liposuction`, function (data) {
+            $.each(data, function (key, val) {
+                $("body table").append($(`<tr><td><label for=${key.replace(/\s+/g, '')}>${key}</label></td><td><textarea id=${key.replace(/\s+/g, '')} rows="1" cols="15"></textarea></td></tr>`));
+                $(`#${key.replace(/\s+/g, '')}`).val(val).on("change", function () {
+                    $(this).addClass("changed");
+                });
+            });
+        });
+    }
 });
 
 $("#button").click(function () {
@@ -44,25 +56,26 @@ function makeListForUpdate() {
 
 function uploadText(text_id, text) {
     $.ajax({
-        url: `http://localhost:5000/change-text?db=text&page=contacts&id=${text_id}&text=${text}`,
+        url: `http://localhost:5000/change-text?db=prices&page=liposuction&id=${text_id}&text=${text}`,
         method: "post",
         xhrFields: {
             withCredentials: true
         },
         success: function (data) {
             if (data.message === "expired signature") {
-                if (data.message === "expired signature") {
-                    $.ajax({
-                        url: "http://localhost:5000/refresh-token",
-                        method: "get",
-                        xhrFields: {
-                            withCredentials: true
-                        },
-                        success: function () {
-                            uploadText(text_id, text);
-                        }
-                    });
-                }
+                $.ajax({
+                    url: "http://localhost:5000/refresh-token",
+                    method: "get",
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function () {
+                        uploadText(text_id, text);
+                    }
+                });
+            } else if (data.message === "missing token") {
+                alert("User not logged in");
+                window.open("login.html", "_self");
             }
         }
     });
@@ -103,6 +116,9 @@ function uploadPhoto(input, page, id) {
                         uploadPhoto(input, page, id);
                     }
                 });
+            } else if (data.message === "missing token") {
+                alert("User not logged in");
+                window.open("login.html", "_self");
             }
         }
     });
