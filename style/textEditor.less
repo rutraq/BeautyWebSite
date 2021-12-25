@@ -2,7 +2,7 @@
 
 table {
   width: 50%;
-  margin: 0 auto 3% auto;
+  margin: 0 auto 1% auto;
   font-family: @fontMontserrat;
 
   td {
@@ -13,6 +13,55 @@ table {
       font-family: @fontMontserrat;
       font-weight: normal;
     }
+
+    div {
+      cursor: pointer;
+      background-color: @goldColor;
+      border-radius: 8px;
+      color: white;
+      padding: 7px 5px;
+      font-size: 11pt;
+      transition: 0.4s;
+      text-align: center;
+
+      &:hover {
+        background-color: @goldColorHover;
+        transform: scale(1.04);
+        transition: .3s;
+      }
+
+      &:active {
+        transform: scale(1);
+        transition: .2s;
+      }
+    }
+  }
+}
+
+.addPrice {
+  cursor: pointer;
+  border-radius: 100%;
+  max-width: 45px;
+  height: 45px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  transition: .4s;
+
+  img {
+    position: relative;
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: .3s;
+  }
+
+  &:active {
+    transform: scale(1);
+    transition: .2s;
   }
 }
 

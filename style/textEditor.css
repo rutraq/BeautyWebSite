@@ -11,7 +11,7 @@
 }
 table {
   width: 50%;
-  margin: 0 auto 3% auto;
+  margin: 0 auto 1% auto;
   font-family: 'Montserrat', sans-serif;
 }
 table td {
@@ -21,6 +21,48 @@ table td textarea {
   font-size: 12pt;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
+}
+table td div {
+  cursor: pointer;
+  background-color: #AE825D;
+  border-radius: 8px;
+  color: white;
+  padding: 7px 5px;
+  font-size: 11pt;
+  transition: 0.4s;
+  text-align: center;
+}
+table td div:hover {
+  background-color: #B8753D;
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+table td div:active {
+  transform: scale(1);
+  transition: 0.2s;
+}
+.addPrice {
+  cursor: pointer;
+  border-radius: 100%;
+  max-width: 45px;
+  height: 45px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  transition: 0.4s;
+}
+.addPrice img {
+  position: relative;
+  width: 100%;
+}
+.addPrice:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.addPrice:active {
+  transform: scale(1);
+  transition: 0.2s;
 }
 #photoEdit {
   margin-top: 5%;
